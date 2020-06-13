@@ -79,6 +79,7 @@ nav ul li:hover a{
 .mid{
   background-color: white;
     position:absolute;
+    padding: 15px;
     left: 50%;
     top: 360%;
     width: 1200px;
