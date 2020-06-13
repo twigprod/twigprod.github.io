@@ -1,0 +1,382 @@
+html{
+  height: 100%;
+}
+body{
+  min-height: 100%;
+  position: relative;
+  height: 100%;
+  font-size: 1.4rem;
+  background-image: url(BG.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-X: hidden;
+}
+
+/* Menu */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat',sans-serif;
+}
+nav{
+  background: #151515;
+  padding: 0.5px 20px;
+}
+nav ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li{
+  padding: 15px 0;
+  cursor: pointer;
+}
+nav ul li.items{
+  position: relative;
+  width: auto;
+  margin: 0 16px;
+  text-align: center;
+  order: 3;
+}
+nav ul li.items:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: white;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+nav ul li.items:hover:after{
+  opacity: 1;
+  bottom: 8px;
+}
+nav ul li.logo{
+  flex: 1;
+  color: white;
+  font-size: 23px;
+  cursor: default;
+}
+nav ul li a{
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: .4s;
+}
+nav ul li:hover a{
+  color: #f5965a;
+}
+
+/* Zone du milieu */
+.mid{
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  width: 1200px;
+  height: 1050px;
+  margin-left: -600px; 
+  margin-top: -525px;
+  box-shadow: 1px 0px 15px 3px rgba(0,0,0,0.75);
+}
+h1{
+  color: black;
+  font-size: 48px;
+  text-decoration: underline #f5965a;
+  text-underline-position: under;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+.para{
+  margin-left: 20px;
+}
+h3{
+  margin-bottom: 15px;
+  margin-right: 80px;
+  border: 1.5px solid #f5965a;
+  padding: 10px;
+  text-align: center;
+}
+.video-accueil{
+  margin-left: 5%;
+  margin-top: 1%;
+}
+.contenu{
+  display: flex;
+}
+.rea{
+  position: absolute;
+  margin-top: 36.5%;
+  margin-left: 5%;
+}
+
+/* Profil individuel Théo */
+.prof{
+  display: flex;
+  margin-left: 20px;
+}
+.profil-carte{
+  display: grid;
+  position:absolute;
+  width:280px;
+  margin:0 auto;
+  padding:40px 30px 30px;
+  background:#fff;
+  border: 5px solid rgba(255,255,255,.7);
+  text-align:center;
+  border-radius:4px;
+  transition: all 200ms ease;
+  bottom: 0;
+  left: 30px;
+}
+.profil-carte:hover{
+  box-shadow: 0px 30px 60px -5px rgba(55,55,71,0.3);
+  transform: translate3d(0,-5px,0);
+}
+.profil-carte header{
+  display:block;
+  margin-bottom:10px;
+}
+.profil-carte header a{
+  width:150px;
+  height:150px;
+  display:block;
+  border-radius:100%;
+  margin:-120px auto 0;
+  box-shadow: 0 0 0 5px #f5965a;
+}
+.profil-carte header a img{
+  border-radius: 50%;
+  width:150px;
+  height:150px;
+}
+.profil-carte:hover header a, .profil-carte header a:hover{
+  animation: bounceOut .4s linear; 
+  -webkit-animation: bounceOut .4s linear;
+}
+.profil-carte header h1{
+  font-size:20px;
+  color:#444;
+  text-transform:uppercase;
+  margin-bottom:5px;
+}
+.profil-carte header h2{
+  font-size:14px;
+  color:#acacac;
+  text-transform:uppercase;
+  margin:0;
+}
+.profil-bio{
+  font-size:14px;
+  color:#a5a5a5;
+  line-height:1.7;
+  font-style: italic;
+  margin-bottom:30px;
+}
+.profil-social li{
+  display: inline-block;
+  margin: 0 10px;
+}
+.profil-social li a{
+  width: 55px;
+  height:55px;
+  display:block;
+  background:#f1f1f1;
+  border-radius:50%;
+  -webkit-transition: all 2.75s cubic-bezier(0,.83,.17,1);
+	-moz-transition: all 2.75s cubic-bezier(0,.83,.17,1);
+	-o-transition: all 2.75s cubic-bezier(0,.83,.17,1);
+	transition: all 2.75s cubic-bezier(0,.83,.17,1);
+  transform-style: preserve-3d;
+}
+.profil-social li a img{
+  width:35px;
+  height:35px;
+  margin:10px auto 0;
+}
+.profil-social li a:hover{
+  background:#ddd;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+}
+@-webkit-keyframes bounceOut {
+  0% {
+    box-shadow: 0 0 0 4px #f5965a;
+    opacity: 1;
+  }
+  25% {
+    box-shadow: 0 0 0 1px #f5965a;
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 0 7px #f5965a;
+    opacity: 1;
+  }
+  75% {
+    box-shadow: 0 0 0 4px #f5965a;
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0 0 0 5px #f5965a;
+    opacity: 1;
+  }
+}
+@keyframes bounceOut {
+  0% {
+    box-shadow: 0 0 0 6px #f5965a;
+    opacity: 1;
+  }
+  25% {
+    box-shadow: 0 0 0 2px #f5965a;
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 0 9px #f5965a;
+    opacity: 1;
+  }
+  75% {
+    box-shadow: 0 0 0 3px #f5965a;
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0 0 0 5px #f5965a;
+    opacity: 1;
+  }
+}
+
+/* Profil individuel Zafir */
+.profil2-carte{
+  display: grid;
+  position:absolute;
+  width:280px;
+  margin:0 auto;
+  padding:40px 30px 30px;
+  background:#fff;
+  border: 5px solid rgba(255,255,255,.7);
+  text-align:center;
+  border-radius:4px;
+  transition: all 200ms ease;
+  bottom: 0;
+  left: 28%;
+}
+.profil2-carte:hover{
+  box-shadow: 0px 30px 60px -5px rgba(55,55,71,0.3);
+  transform: translate3d(0,-5px,0);
+}
+.profil2-carte header{
+  display:block;
+  margin-bottom:10px;
+}
+.profil2-carte header a{
+  width:150px;
+  height:150px;
+  display:block;
+  border-radius:100%;
+  margin:-120px auto 0;
+  box-shadow: 0 0 0 5px #f5965a;
+}
+.profil2-carte header a img{
+  border-radius: 50%;
+  width:150px;
+  height:150px;
+}
+.profil2-carte:hover header a, .profil2-carte header a:hover{
+  animation: bounceOut .4s linear; 
+  -webkit-animation: bounceOut .4s linear;
+}
+.profil2-carte header h1{
+  font-size:20px;
+  color:#444;
+  text-transform:uppercase;
+  margin-bottom:5px;
+}
+.profil2-carte header h2{
+  font-size:14px;
+  color:#acacac;
+  text-transform:uppercase;
+  margin:0;
+}
+.profil2-bio{
+  font-size:14px;
+  color:#a5a5a5;
+  line-height:1.7;
+  font-style: italic;
+  margin-bottom:30px;
+}
+.profil2-social li{
+  display: inline-block;
+  margin: 0 10px;
+}
+.profil2-social li a{
+  width: 55px;
+  height:55px;
+  display:block;
+  background:#f1f1f1;
+  border-radius:50%;
+  -webkit-transition: all 2.75s cubic-bezier(0,.83,.17,1);
+	-moz-transition: all 2.75s cubic-bezier(0,.83,.17,1);
+	-o-transition: all 2.75s cubic-bezier(0,.83,.17,1);
+	transition: all 2.75s cubic-bezier(0,.83,.17,1);
+  transform-style: preserve-3d;
+}
+.profil2-social li a img{
+  width:35px;
+  height:35px;
+  margin:10px auto 0;
+}
+.profil2-social li a:hover{
+  background:#ddd;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+}
+
+/* Décoration */
+.coorde {
+  color: white;
+  font-size: 1rem;
+  position: relative;
+  float: left;
+  top: 30%;
+  letter-spacing: .2rem;
+  left: -7.5rem;
+  margin: 0;
+  transform: rotate(-90deg) translateY(50%);
+}
+
+/* Pied de page */
+footer{
+  background:black;
+  position:relative;
+  bottom:0;
+  width:100%;
+  height:70px;
+  margin-top: 5%;
+  top: 100%;
+  display: flex;
+  opacity: 0.5;
+}
+.copy{
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  margin-top: 25px;
+  margin-left: 63%;
+}
+.accueil2{
+  margin-top: 30%;
+}
+.ml{
+  list-style: none;
+  margin-top: 20px;
+  margin-left: 35px;
+  font-size: 18px;
+}
+a:link{
+  text-decoration: none;
+}

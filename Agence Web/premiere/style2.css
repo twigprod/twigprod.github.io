@@ -1,0 +1,529 @@
+html{
+  height: 100%;
+}
+body{
+  min-height: 100%;
+  position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 1.4rem;
+    background-image: url(BG.jpg);
+    overflow-x: hidden;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Menu */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat',sans-serif;
+}
+nav{
+  background: #151515;
+  padding: 0.5px 20px;
+}
+nav ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li{
+  padding: 15px 0;
+  cursor: pointer;
+}
+nav ul li.items{
+  position: relative;
+  width: auto;
+  margin: 0 16px;
+  text-align: center;
+  order: 3;
+}
+nav ul li.items:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: white;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+nav ul li.items:hover:after{
+  opacity: 1;
+  bottom: 8px;
+}
+nav ul li.logo{
+  flex: 1;
+  color: white;
+  font-size: 23px;
+  cursor: default;
+}
+nav ul li a{
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: .4s;
+}
+nav ul li:hover a{
+  color: #f5965a;
+}
+
+/* Zone du milieu */
+.mid{
+  background-color: white;
+  display: block;
+  position:absolute;
+  left: 50%;
+  top: 100%;
+  width: 1200px;
+  height: 1260px;
+  margin-left: -600px; 
+  margin-top: -630px;
+  box-shadow: 1px 0px 15px 3px rgba(0,0,0,0.75);
+}
+.para{
+  margin-left: 20px;
+}
+
+.video-accueil{
+  margin-left: 5%;
+  margin-top: 1%;
+}
+.contenu{
+  display: flex;
+}
+h1{
+  color: black;
+  font-size: 48px;
+  text-decoration: underline #f5965a;
+  text-underline-position: under;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+/* Les cartes */
+.carte {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: center;
+  height: 500px;
+}
+.carte-image {
+  grid-area: image;
+  background: url("image1.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.carte-text {
+  grid-area: text;
+  margin: 25px;
+}
+.carte-text p {
+  color: grey;
+  font-size:20px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.carte-text h2 {
+  margin-top:0px;
+  font-size:32px;
+}
+.carte-stats {
+  grid-area: stats; 
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: 1.5px solid white;
+  background: #f5965a;
+}
+.carte-stats .stat {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding:10px;
+  font-size: 30px;
+}
+.carte:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+.carte {
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin:30px;
+}
+
+.carte2 {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: center;
+  height: 500px;
+}
+.carte2-image {
+  grid-area: image;
+  background: url("image2.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.carte2-text {
+  grid-area: text;
+  margin: 25px;
+}
+.carte2-text p {
+  color: grey;
+  font-size:20px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.carte2-text h2 {
+  margin-top:0px;
+  font-size:32px;
+}
+.carte2-stats {
+  grid-area: stats; 
+  display: grid;
+  border: 1.5px solid white;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: #f5965a;
+}
+.carte2-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding:10px;
+  font-size: 40px;
+}
+.carte2:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+.carte2 {
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin:30px;
+}
+.carte3 {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: center;
+  height: 500px;
+}
+.carte3-image {
+  grid-area: image;
+  background: url("image3.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.carte3-text {
+  grid-area: text;
+  margin: 25px;
+}
+.carte3-text p {
+  color: grey;
+  font-size:20px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.carte3-text h2 {
+  margin-top:0px;
+  font-size:32px;
+}
+.carte3-stats {
+  grid-area: stats; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: 1.5px solid white;
+  background: #f5965a;
+}
+.carte3-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding:10px;
+  font-size: 40px;
+}
+.carte3:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+.carte3 {
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin:30px;
+}
+.les-cartes{
+  display: flex;
+  margin-left: 4.5%;
+}
+
+.carte4 {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: center;
+  height: 500px;
+}
+.carte4-image {
+  grid-area: image;
+  background: url("image4.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.carte4-text {
+  grid-area: text;
+  margin: 25px;
+}
+.carte4-text p {
+  color: grey;
+  font-size:20px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.carte4-text h2 {
+  margin-top:0px;
+  font-size:32px;
+}
+.carte4-stats {
+  grid-area: stats; 
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: 1.5px solid white;
+  background: #f5965a;
+}
+.carte4-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding:10px;
+  font-size: 30px;
+}
+.carte4:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+.carte4 {
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin:30px;
+}
+
+.carte5 {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: center;
+  height: 500px;
+}
+.carte5-image {
+  grid-area: image;
+  background: url("image5.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.carte5-text {
+  grid-area: text;
+  margin: 25px;
+}
+.carte5-text p {
+  color: grey;
+  font-size:20px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.carte5-text h2 {
+  margin-top:0px;
+  font-size:32px;
+}
+.carte5-stats {
+  grid-area: stats; 
+  display: grid;
+  border: 1.5px solid white;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: #f5965a;
+}
+.carte5-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding:10px;
+  font-size: 40px;
+}
+.carte5:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+.carte5 {
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin:30px;
+}
+
+.carte6 {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: center;
+  height: 500px;
+}
+.carte6-image {
+  grid-area: image;
+  background: url("image6.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.carte6-text {
+  grid-area: text;
+  margin: 25px;
+}
+.carte6-text p {
+  color: grey;
+  font-size:20px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.carte6-text h2 {
+  margin-top:0px;
+  font-size:32px;
+}
+.carte6-stats {
+  grid-area: stats; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: 1.5px solid white;
+  background: #f5965a;
+}
+.carte6-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding:10px;
+  font-size: 40px;
+}
+.carte6:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+.carte6 {
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin:30px;
+}
+
+/* Décoration */
+.coorde {
+  color: white;
+  font-size: 1rem;
+  position: relative;
+  float: left;
+  top: 45%;
+  letter-spacing: .2rem;
+  left: -7.5rem;
+  margin: 0;
+  transform: rotate(-90deg) translateY(50%);
+}
+
+/* Pied de page */
+.accueil3{
+  margin-top: 40%;
+}
+footer{
+  background:black;
+  position:relative;
+  bottom:0;
+  width:100%;
+  height:70px;
+  margin-top: 5%;
+  top: 100%;
+  display: flex;
+  opacity: 0.5;
+}
+.copy{
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  margin-top: 25px;
+  margin-left: 63%;
+}
+.accueil2{
+  margin-top: 30%;
+}
+.ml{
+  list-style: none;
+  margin-top: 20px;
+  margin-left: 35px;
+  font-size: 18px;
+}
+a:link{
+  text-decoration: none;
+}

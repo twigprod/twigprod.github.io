@@ -1,0 +1,274 @@
+html{
+  height: 100%;
+  
+}
+body{
+  min-height: 100%;
+  position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 1.4rem;
+    background-image: url(BG.jpg);
+    overflow-X: hidden;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Menu */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat',sans-serif;
+}
+nav{
+  background: #151515;
+  padding: 0.5px 20px;
+}
+nav ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li{
+  padding: 15px 0;
+  cursor: pointer;
+}
+nav ul li.items{
+  position: relative;
+  width: auto;
+  margin: 0 16px;
+  text-align: center;
+  order: 3;
+}
+nav ul li.items:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: white;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+nav ul li.items:hover:after{
+  opacity: 1;
+  bottom: 8px;
+}
+nav ul li.logo{
+  flex: 1;
+  color: white;
+  font-size: 23px;
+  cursor: default;
+}
+nav ul li a{
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: .4s;
+}
+nav ul li:hover a{
+  color: #f5965a;
+}
+
+/* Zone du milieu */
+.mid{
+  background-color: white;
+  position:absolute;
+  left: 50%;
+  top: 65%;
+  width: 1200px;
+  height: 700px;
+  margin-left: -600px; 
+  margin-top: -350px;
+  box-shadow: 1px 0px 15px 3px rgba(0,0,0,0.75);
+}
+
+/* Formulaire de contact */
+.contenu{
+  margin-top: 6%;
+}
+.contenu h2{
+  width: 100%;
+  color: #f5965a;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.contenu .row100{
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+}
+.contenu .row100 .col{
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  margin: 50px 0 10px;
+  transition: 0.5s;
+}
+.contenu .row100 .inputbox{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.contenu .row100 .inputbox input,
+.contenu .row100 .inputbox.textarea textarea{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 21px;
+  padding: 0 10px;
+  z-index: 1;
+  color: white;
+}
+.contenu .row100 .inputbox .text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 20px;
+  font-size: 25px;
+  padding: 0 10px;
+  display: block;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.contenu .row100 .inputbox input:focus + .text,
+.contenu .row100 .inputbox input:valid + .text{
+  top: -35px;
+  left: -10px;
+}
+.contenu .row100 .inputbox .ligne{
+  position: absolute;
+  bottom: -1px;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #f5965a;
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+.contenu .row100 .inputbox input:focus ~ .ligne,
+.contenu .row100 .inputbox input:valid ~ .ligne{
+  height: 30px;
+}
+.contenu .row100 .inputbox.textarea{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+}
+.contenu .row100 .inputbox.textarea textarea{
+  height: 100%;
+  resize: none;
+}
+.contenu .row100 .inputbox textarea:focus + .text,
+.contenu .row100 .inputbox textarea:valid + .text{
+  top: -35px;
+  left: -10px;
+}
+.contenu .row100 .inputbox textarea:focus ~ .ligne,
+.contenu .row100 .inputbox textarea:valid ~ .ligne{
+  height: 100%;
+}
+input[type="submit"]
+{
+  border: none;
+  padding: 7px 35px;
+  cursor: pointer;
+  outline: none;
+  background: #f5965a;
+  color: white;
+  font-size: 18px;
+  border-radius: 2px;
+}
+
+/* Réseaux sociaux */
+.profil-social li{
+  display: inline-block;
+  margin: 0 10px;
+}
+.profil-social li a{
+  display:block;
+  -webkit-transition: all 2.75s cubic-bezier(0,.83,.17,1);
+	-moz-transition: all 2.75s cubic-bezier(0,.83,.17,1);
+	-o-transition: all 2.75s cubic-bezier(0,.83,.17,1);
+	transition: all 2.75s cubic-bezier(0,.83,.17,1);
+  transform-style: preserve-3d;
+}
+.profil-social li a img{
+  width:45px;
+  height:45px;
+  margin: 10px auto 0 10px;
+  display: block;
+  margin-top: 5px;
+}
+.profil-social li a:hover{
+  
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  margin-top: 5px;
+}
+.deux{
+  display: flex;
+  justify-content: center;
+  margin-right: 3%;
+}
+.reseaux{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+/* Pied de page */
+footer{
+  background:black;
+  position:relative;
+  bottom:0;
+  width:100%;
+  height:70px;
+  margin-top: 5%;
+  top: 100%;
+  display: flex;
+  opacity: 0.5;
+}
+.copy{
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  margin-top: 25px;
+  margin-left: 63%;
+}
+.coorde {
+  color: white;
+  font-size: 1rem;
+  position: relative;
+  float: left;
+  top: 30%;
+  letter-spacing: .2rem;
+  left: -7.5rem;
+  margin: 0;
+  transform: rotate(-90deg) translateY(50%);
+}
+.accueil2{
+  margin-top: 8%;
+}
+.ml{
+  list-style: none;
+  margin-top: 20px;
+  margin-left: 35px;
+  font-size: 18px;
+}
+a:link{
+  text-decoration: none;
+}

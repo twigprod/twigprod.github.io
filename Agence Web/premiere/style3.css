@@ -1,0 +1,175 @@
+html{
+  height: 100%;
+}
+body{
+  min-height: 100%;
+  position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 1.4rem;
+    background-image: url(BG.jpg);
+    overflow-X: hidden;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Menu */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat',sans-serif;
+}
+nav{
+  background: #151515;
+  padding: 0.5px 20px;
+}
+nav ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li{
+  padding: 15px 0;
+  cursor: pointer;
+}
+nav ul li.items{
+  position: relative;
+  width: auto;
+  margin: 0 16px;
+  text-align: center;
+  order: 3;
+}
+nav ul li.items:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: white;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+nav ul li.items:hover:after{
+  opacity: 1;
+  bottom: 8px;
+}
+nav ul li.logo{
+  flex: 1;
+  color: white;
+  font-size: 23px;
+  cursor: default;
+}
+nav ul li a{
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: .4s;
+}
+nav ul li:hover a{
+  color: #f5965a;
+}
+
+/* Zone du milieu */
+.coorde {
+    color: white;
+    font-size: 1rem;
+    position: relative;
+    float: left;
+    top: 30%;
+    letter-spacing: .2rem;
+    left: -7.5rem;
+    margin: 0;
+    transform: rotate(-90deg) translateY(50%);
+}
+.mid{
+  background-color: white;
+    position:absolute;
+    left: 50%;
+    top: 143%;
+    width: 1200px;
+    height: 1900px;
+    margin-left: -600px; 
+    margin-top: -950px;
+    box-shadow: 1px 0px 15px 3px rgba(0,0,0,0.75);
+}
+h1{
+  color: black;
+  font-size: 48px;
+  text-decoration: underline #f5965a;
+  text-underline-position: under;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+.tout{
+   margin-top: 2%;
+}
+.para{
+  margin-left: 20%;
+}
+h3{
+  margin-bottom: 15px;
+  margin-right: 10px;
+  border: 1.5px solid #f5965a;
+  padding: 10px;
+  text-align: center;
+}
+.resum1{
+  display: flex;
+  margin-right: 10px;
+}
+.resum2{
+  display: flex;
+  margin-right: 10px;
+}
+.resum3{
+  display: flex;
+  margin-right: 10px;
+}
+.resum4{
+  display: flex;
+  margin-right: 10px;
+}
+.texte1{
+  margin-left: 10px;
+  margin-top: 23px;
+  text-align: center;
+}
+
+
+/* Pied de page */
+footer{
+  background:black;
+  position:relative;
+  bottom:0;
+  width:100%;
+  height:70px;
+  margin-top: 95%;
+  top: 100%;
+  display: flex;
+  opacity: 0.5;
+}
+.copy{
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  margin-top: 25px;
+  margin-left: 63%;
+}
+.accueil2{
+  margin-top: 30%;
+}
+.ml{
+  list-style: none;
+  margin-top: 20px;
+  margin-left: 35px;
+  font-size: 18px;
+}
+a:link{
+  text-decoration: none;
+}
