@@ -1,13 +1,8 @@
-html{
-  height: 100%;
-}
 body{
   min-height: 100%;
-  position: relative;
     margin: 0;
     padding: 0;
     height: 100%;
-    font-size: 1.4rem;
     background-image: url(BG.jpg);
     overflow-X: hidden;
     background-size: cover;
@@ -78,15 +73,10 @@ nav ul li:hover a{
 /* Zone du milieu */
 .mid{
   background-color: white;
-    position:absolute;
-    padding: 15px;
-    left: 50%;
-    top: 360%;
-    width: 1200px;
-    height: 5160px;
-    margin-left: -600px; 
-    margin-top: -2580px;
-    box-shadow: 1px 0px 15px 3px rgba(0,0,0,0.75);
+  font-size: 18px;
+  margin: 8% 10% 8% 10%;
+  padding: 15px;
+  box-shadow: 1px 0px 15px 3px rgba(0,0,0,0.75);
 }
 h1{
   color: black;
@@ -100,11 +90,7 @@ h1{
 /* Pied de page */
 footer{
   background:black;
-  position:relative;
-  bottom:0;
-  width:115%;
   height:70px;
-  margin-top: 10%;
   display: flex;
   opacity: 0.5;
 }

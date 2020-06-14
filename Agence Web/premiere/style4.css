@@ -79,19 +79,15 @@ nav ul li:hover a{
 /* Zone du milieu */
 .mid{
   background-color: white;
-  position:absolute;
-  left: 50%;
-  top: 65%;
-  width: 1200px;
-  height: 700px;
-  margin-left: -600px; 
-  margin-top: -350px;
+  font-size: 18px;
+  margin: 8% 10% 8% 10%;
+  padding: 15px;
   box-shadow: 1px 0px 15px 3px rgba(0,0,0,0.75);
 }
 
 /* Formulaire de contact */
 .contenu{
-  margin-top: 6%;
+  margin-top: 3%;
 }
 .contenu h2{
   width: 100%;
@@ -233,12 +229,7 @@ input[type="submit"]
 /* Pied de page */
 footer{
   background:black;
-  position:relative;
-  bottom:0;
-  width:100%;
   height:70px;
-  margin-top: 5%;
-  top: 100%;
   display: flex;
   opacity: 0.5;
 }
@@ -259,9 +250,6 @@ footer{
   left: -7.5rem;
   margin: 0;
   transform: rotate(-90deg) translateY(50%);
-}
-.accueil2{
-  margin-top: 8%;
 }
 .ml{
   list-style: none;
