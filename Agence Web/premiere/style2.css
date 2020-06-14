@@ -91,9 +91,6 @@ nav ul li:hover a{
   margin-left: 5%;
   margin-top: 1%;
 }
-.contenu{
-  display: flex;
-}
 h1{
   color: black;
   font-size: 48px;
@@ -112,7 +109,6 @@ h1{
   border-radius: 18px;
   background: white;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
-  font-family: roboto;
   text-align: center;
   height: 500px;
 }
@@ -287,7 +283,7 @@ h1{
 }
 .les-cartes{
   display: flex;
-  margin-left: 4.5%;
+  justify-content: center;
 }
 
 .carte4 {

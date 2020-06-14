@@ -108,13 +108,12 @@ h3{
   display: flex;
   margin: 5% 0 0 7%;
   justify-content: flex-start;
+  padding-top: 15px;
   
 }
 .profil-carte{
   display: grid;
-
   width:280px;
- 
   padding:40px 30px 30px;
   background:#fff;
   border: 5px solid rgba(255,255,255,.7);
